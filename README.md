@@ -1,36 +1,56 @@
-# MyHome
+# <img src="public/myhome.svg" width="38" height="38" alt=""> MyHome
 
-**TR** · Ölçülü oda planını çiz, mobilyaları yerleştir, malzeme ve ışık seç, odanı 3B görüntüle.
-**EN** · Draw a room to scale, arrange furniture, choose finishes and lighting, and view the room in 3D.
+**Ölçülü oda planı ve 3B iç mekân tasarımı** · [English](#english)
+
+Odanı santimetreyle çiz, mobilyaları planda sürükle ve sonucu yanındaki 3B görünümde incele. Bir gardırobun kirişin altına sığıp sığmadığını veya yatakla dolap arasında ne kadar geçiş kaldığını, eşyaları taşımadan önce görebilirsin.
 
 <!-- publication:start -->
-[Web sürümü rehberi / Web guide](docs/start.md#web) · [Windows için indir / Download for Windows](https://github.com/nsevinc/MyHome/releases/latest) · [Kaynak koddan çalıştır / Run from source](#source)
+**[Windows için indir / Download for Windows](https://github.com/nsevinc/MyHome/releases/latest)** · [Kaynak koddan çalıştır / Run from source](#source) · [Web sürümü rehberi / Web guide](docs/start.md#web)
 <!-- publication:end -->
 
-![Dolaplar için dört LED montaj örneği / Four cabinet lighting layouts](public/help/dolap-led-montaji.png)
+[![MyHome editöründe yatak odası tasarımı. Solda eşya kataloğu, ortada ölçülü 2B plan ile aynı odanın 3B görünümü, sağda oda ve malzeme ayarları.](docs/screenshots/myhome-editor.png)](docs/screenshots/myhome-editor.png)
 
-## Türkçe
+*2B + 3B görünümü açık bir yatak odası. Planda kapı açılımını ve duvar ölçülerini okurken sağda yatağın, gardırobun ve pencerenin birbirine göre konumunu görebilirsin.*
 
-Web sürümünde 2B plan, 3B düzenleme, GLB içe aktarma, LED ışıklar, kamera, PDF, galeri ve **1920 × 1080 PNG** kullanabilirsin. Projeler tarayıcının profilinde ve site adresinde saklanır. Çalışmalarını taşımak için **Proje → Projeyi renderlarla indir** ile yedek al.
+## İlk odanı tasarla
 
-Windows x64 ZIP dosyasını tamamen çıkarıp **MyHome.cmd** dosyasını çalıştır. Node.js pakete dahildir. Fotogerçekçi **3840 × 2160 Cycles** için ayrıca Blender 4.5 LTS kur. Web’den veya daha eski bir MyHome kurulumundan aldığın yedeği **Proje → Projeyi aç** ile açabilirsin.
+1. **Odayı çiz.** Duvar uzunluklarını ve tavan yüksekliğini gir. Kapı, pencere, kolon ve kirişleri ekle. Elinde bir taslak varsa ölçüsünü bildiğin bir duvarı referans alarak çizimini ölçeklendir.
+2. **Yerleşimi dene.** Katalogdan bir yatak seç veya kendi GLB modelini ekle. Eşyayı döndür, dolap önünde geçiş alanı ayır ve kapakların açılımını kontrol et. **2B + 3B** ile aynı yerleşimi iki açıdan izle.
+3. **Görüntüyü al.** Yüzeylere malzeme ata, ışığı ayarla ve bir kamera açısı kaydet. **PNG indir** ile görüntü al. Kayıtlı kareleri **Proje → Proje renderları** altında yeniden açabilirsin.
 
-## English
+## Hangi sürümü kullanmalıyım?
 
-The web edition includes 2D planning, a 3D editor, GLB import, cabinet lighting, saved cameras, PDF, a gallery and **1920 × 1080 PNG** export. Project data stays in the browser profile for that site. Export a backup before changing devices or clearing browser storage. The editor and illustrated guide are in Turkish.
+| | Tarayıcı | Windows x64 |
+|---|---|---|
+| Oda tasarımı | 2B ve 3B düzenleme, katalog, GLB, malzeme ve ışık | Aynı editör ve proje biçimi |
+| Görüntü çıkışı | 1920 × 1080 PNG | 1920 × 1080 PNG ve Blender 4.5 LTS ile 3840 × 2160 Cycles render |
+| Başlatma | Web sürümünü kaynak koddan çalıştırabilir veya yayınlandığında site adresini açabilirsin | ZIP’i çıkarıp `MyHome.cmd` dosyasına çift tıkla. Node.js pakete dahildir |
 
-Extract the Windows x64 ZIP and double-click **MyHome.cmd**. Node.js is included. Install Blender 4.5 LTS for **3840 × 2160 Cycles** rendering. In the web app choose **Proje → Projeyi renderlarla indir** (download a project with its images). In the Windows app choose **Proje → Projeyi aç** (open project).
+**Windows’ta ilk açılış için** sürüm sayfasında **Assets** bölümünden adı `MyHome-Windows-x64-` ile başlayan ZIP’i indir ve tamamını bir klasöre çıkar. Blender’ı 4K Cycles kullanacağın zaman ayrıca kurabilirsin. [Windows ve Blender rehberi](docs/windows-portable.md)
+
+**Projeni taşımak için** menüden **Proje → Projeyi renderlarla indir** seçeneğini kullan. Web projeleri kullandığın tarayıcı profilinde ve site adresinde saklanır. İndirdiğin yedeği başka bir bilgisayarda **Proje → Projeyi aç** ile açabilirsin.
 
 <a id="source"></a>
-## Kaynak koddan / From source
 
-Node.js 22.23.5 is the runtime used by CI and the Windows release. From the repository root:
+## Kaynak koddan çalıştır / Run from source
+
+Proje klasöründe Node.js 22.23.5 ile aşağıdaki komutları çalıştır. On Windows PowerShell you can use `npm.cmd` in place of `npm`.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-[MyHome’u yerelde aç / Open the local editor](http://127.0.0.1:5273/). Windows PowerShell’de `npm.cmd` kullanabilirsin. Run `npm test` for the test suite and `npm run build` for the static site in `dist/`. Use `npm run preview` to test that web edition locally.
+[Editörü yerelde aç / Open the local editor](http://127.0.0.1:5273/)
 
-[Hızlı başlangıç / Quick start](docs/start.md) · [Windows ve Blender](docs/windows-portable.md) · [GitHub ve Cloudflare yayın adımları / Publishing guide](docs/publishing.md) · [Model kataloğu](docs/catalog.md) · [MIT](LICENSE) · [Third-party notices](docs/notices.md)
+`npm test` otomatik kontrolleri çalıştırır. `npm run build` web sürümünü `dist/` klasöründe üretir.
+
+## English
+
+MyHome is an open-source room planner. Draw a floor plan to scale and arrange furniture while looking at the same room in 3D. You can check door swings and walking space, fit modular cabinets beneath beams, import GLB furniture and save camera views. The editor and illustrated guide are in Turkish.
+
+- **Browser** — Design in 2D and 3D and export a 1920 × 1080 PNG. Projects are stored in your browser profile for the site.
+- **Windows x64** — Download the `MyHome-Windows-x64-` ZIP from the release’s **Assets**, extract it and double-click `MyHome.cmd`. Install Blender 4.5 LTS for 3840 × 2160 Cycles renders.
+- **Move a design** — Choose **Proje → Projeyi renderlarla indir** to export the project with its images. Use **Proje → Projeyi aç** on the other device to restore it.
+
+[Hızlı başlangıç / Quick start](docs/start.md) · [Model kataloğu](docs/catalog.md) · [Yayın rehberi / Publishing](docs/publishing.md) · [MIT lisansı](LICENSE) · [Third-party notices](docs/notices.md)

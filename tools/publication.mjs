@@ -19,7 +19,8 @@ const block = /<!-- publication:start -->[\s\S]*?<!-- publication:end -->/
 if (!block.test(readme)) throw new Error('Missing README publication links')
 if (values.site !== undefined) pkg.homepage = siteHomepage(values.site)
 const web = pkg.homepage ? '[Tarayıcıda aç / Open in browser](' + pkg.homepage + ')' : '[Web sürümü rehberi / Web guide](docs/start.md#web)'
-const links = web + ' · [Windows için indir / Download for Windows](' + github + '/releases/latest) · [Kaynak koddan çalıştır / Run from source](#source)'
+const windows = '**[Windows için indir / Download for Windows](' + github + '/releases/latest)**'
+const links = [windows, '[Kaynak koddan çalıştır / Run from source](#source)', web].join(' · ')
 pkg.repository = { type: 'git', url: github }
 await writeFile(pkgFile, JSON.stringify(pkg, null, 2) + '\n')
 await writeFile(readmeFile, readme.replace(block, '<!-- publication:start -->\n' + links + '\n<!-- publication:end -->'))
