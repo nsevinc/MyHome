@@ -5,7 +5,7 @@
 Odanı santimetreyle çiz, mobilyaları planda sürükle ve sonucu yanındaki 3B görünümde incele. Bir gardırobun kirişin altına sığıp sığmadığını veya yatakla dolap arasında ne kadar geçiş kaldığını, eşyaları taşımadan önce görebilirsin.
 
 <!-- publication:start -->
-**[Windows için indir / Download for Windows](https://github.com/nsevinc/MyHome/releases/latest)** · [Kaynak koddan çalıştır / Run from source](#source) · [Tarayıcıda aç / Open in browser](https://myhome-oda.pages.dev/)
+**[Windows için indir / Download for Windows](https://github.com/nsevinc/MyHome/releases/latest)** · [Kaynak koddan çalıştır / Run from source](#source) · [Tarayıcıda aç / Open in browser](https://myhome-nuri-sevinc.pages.dev/)
 <!-- publication:end -->
 
 [![MyHome editöründe yatak odası tasarımı. Solda eşya kataloğu, ortada ölçülü 2B plan ile aynı odanın 3B görünümü, sağda oda ve malzeme ayarları.](docs/screenshots/myhome-editor.png)](docs/screenshots/myhome-editor.png)
@@ -24,7 +24,7 @@ Odanı santimetreyle çiz, mobilyaları planda sürükle ve sonucu yanındaki 3B
 |---|---|---|
 | Oda tasarımı | 2B ve 3B düzenleme, katalog, GLB, malzeme ve ışık | Aynı editör ve proje biçimi |
 | Görüntü çıkışı | 1920 × 1080 PNG | 1920 × 1080 PNG ve Blender 4.5 LTS ile 3840 × 2160 Cycles render |
-| Başlatma | [Web editörünü aç](https://myhome-oda.pages.dev/) ve odanı çizmeye başla | ZIP’i çıkarıp `MyHome.cmd` dosyasına çift tıkla. Node.js pakete dahildir |
+| Başlatma | [Web editörünü aç](https://myhome-nuri-sevinc.pages.dev/) ve odanı çizmeye başla | ZIP’i çıkarıp `MyHome.cmd` dosyasına çift tıkla. Node.js pakete dahildir |
 
 **Windows’ta ilk açılış için** sürüm sayfasında **Assets** bölümünden adı `MyHome-Windows-x64-` ile başlayan ZIP’i indir ve tamamını bir klasöre çıkar. Blender’ı 4K Cycles kullanacağın zaman ayrıca kurabilirsin. [Windows ve Blender rehberi](docs/windows-portable.md)
 
