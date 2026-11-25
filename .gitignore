@@ -1,0 +1,47 @@
+# Dependencies, compilation and tool caches
+node_modules/
+dist/
+.vite/
+.vite-temp/
+.cache/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+
+# Local renders, portable packages and temporary work
+output/
+tmp/
+.myhome/
+# Default filename used by the render CLI example at the project root.
+/render.png
+*.sqlite*
+*.workspace.json
+*.myhome.json
+/MyHome-Source-*.zip
+/MyHome-Windows-x64-*.zip
+/MyHome-Windows-x64-*.zip.sha256
+/blender/
+/runtime/
+/ayarlar.json
+
+# Local configuration and logs
+.env
+.env.*
+!.env.example
+*.local
+.npmrc
+*.log
+
+# Browser automation and test output
+.playwright-cli/
+playwright-report/
+test-results/
+coverage/
+
+# Personal editor and OS files
+.vscode/
+*.code-workspace
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
